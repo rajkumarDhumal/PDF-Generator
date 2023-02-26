@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+</head>
+<body>
+    <h1>Invoice</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Rate</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="item : ${items}">
+                <td th:text="${item.name}"></td>
+                <td th:text="${item.quantity}"></td>
+                <td th:text="${item.rate}"></td>
+                <td th:text="${item.amount}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        Seller: <span th:text="${seller}"></span><br>
+        Seller GSTIN: <span th:text="${sellerGstin}"></span><br>
+        Seller Address: <span th:text="${sellerAddress}"></span><br>
+        Buyer: <span th:text="${buyer}"></span><br>
+        Buyer GSTIN: <span th:text="${buyerGstin}"></span><br>
+        Buyer Address: <span th:text="${buyerAddress}"></span><br>
+    </p>
+</body>
+</html>

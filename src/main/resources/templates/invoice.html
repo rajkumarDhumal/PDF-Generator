@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Template</title>
+    <style>
+        /* add any custom styles here */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div style="float: left;">
+        <p>Seller: [[${seller}]]</p>
+        <p>Seller GSTIN: [[${sellerGstin}]]</p>
+        <p>Seller Address: [[${sellerAddress}]]</p>
+    </div>
+    <div style="float: right;">
+        <p>Buyer: [[${buyer}]]</p>
+        <p>Buyer GSTIN: [[${buyerGstin}]]</p>
+        <p>Buyer Address: [[${buyerAddress}]]</p>
+    </div>
+    <br clear="all" />
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Rate</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="item : ${items}">
+                <td th:text="${item.name}"></td>
+                <td th:text="${item.quantity}"></td>
+                <td th:text="${item.rate}"></td>
+                <td th:text="${item.amount}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
