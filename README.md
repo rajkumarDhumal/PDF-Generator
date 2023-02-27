@@ -1,6 +1,6 @@
 # PDF-Generator
 
-PDF Generator is a Spring Boot application that allows users to generate and download PDF documents. The application provides REST APIs that can be used to generate and download PDF documents based on user input.
+ The application provides REST APIs that can be used to generate and download PDF documents based on user input.
 
 
 Features
